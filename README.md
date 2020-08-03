@@ -1,6 +1,10 @@
 # uuagc-constant-folding
 Example of a constant folding transformation implemented with uuagc.
 
+I've written this to show an alternative way of implementing the traversal from https://www.michaelpj.com/blog/2020/08/02/lenses-for-tree-traversals.html, which is discussed at [this reddit thread](https://old.reddit.com/r/haskell/comments/i2js6q/lenses_for_tree_traversals/).
+
+This repository is meant for people who want to try out attribute grammars for themselves.
+
 ## How to run
 ```
 $ git clone --recurse-submodules https://github.com/noughtmare/uuagc-constant-folding.git
