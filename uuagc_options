@@ -1,0 +1,2 @@
+file: "src/ConstantFolding.ag"
+options: haskellsyntax, module "ConstantFolding", catas, semfuns, signatures, wrappers, data

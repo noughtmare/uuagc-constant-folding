@@ -1,0 +1,28 @@
+-- vi:syntax=haskell
+
+data Type
+  | IntegerType
+  | Funtype argType :: Type resType :: Type
+deriving Type : Show
+
+data Term
+  | Var      name  :: String
+  | Lam      name  :: String   type' :: Type  body :: Term
+  | App      fun   :: Term     arg   :: Term
+  | Plus     x     :: Term     y     :: Term
+  | Constant value :: Integer
+deriving Term : Show
+
+attr Term Type
+  syn cf :: self
+
+sem Term
+  | Plus lhs.cf = { case (@x.cf, @y.cf) of
+      (Constant x, Constant y) -> Constant (x + y)
+      (x, y) -> Plus x y
+    }
+
+{
+constantFold :: Term -> Term
+constantFold expr = cf_Syn_Term (wrap_Term (sem_Term expr) Inh_Term)
+}
