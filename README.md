@@ -7,3 +7,8 @@ $ git clone --recurse-submodules https://github.com/noughtmare/uuagc-constant-fo
 $ cd uuagc-constant-folding
 $ cabal run
 ```
+
+## UUAGC manual
+
+http://www.cs.uu.nl/docs/vakken/mapa/downloads/agmanual.pdf  
+([also saved in the wayback machine](http://web.archive.org/web/20200803120122/http://www.cs.uu.nl/docs/vakken/mapa/downloads/agmanual.pdf))
