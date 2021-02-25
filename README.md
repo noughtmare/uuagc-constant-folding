@@ -7,7 +7,7 @@ This repository is meant for people who want to try out attribute grammars for t
 
 ## How to run
 ```
-$ git clone --recurse-submodules https://github.com/noughtmare/uuagc-constant-folding.git
+$ git clone https://github.com/noughtmare/uuagc-constant-folding.git
 $ cd uuagc-constant-folding
 $ cabal run
 ```

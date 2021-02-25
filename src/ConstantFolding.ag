@@ -17,10 +17,10 @@ attr Term Type
   syn cf :: self
 
 sem Term
-  | Plus lhs.cf = { case (@x.cf, @y.cf) of
-      (Constant x, Constant y) -> Constant (x + y)
-      (x, y) -> Plus x y
-    }
+  | Plus lhs.cf
+      = case (@x.cf, @y.cf) of
+          (Constant x, Constant y) -> Constant (x + y)
+          (x, y) -> Plus x y
 
 {
 constantFold :: Term -> Term
